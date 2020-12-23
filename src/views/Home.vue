@@ -18,6 +18,8 @@ export default {
     };
   },
   mounted: function() {
+    // console.log(process.env.VUE_APP_MY_API_KEY)
+    mapboxgl.accessToken = process.env.VUE_APP_MY_API_KEY;
     var map = new mapboxgl.Map({
     container: 'map', // container id
     style: 'mapbox://styles/mapbox/outdoors-v11', // style URL
